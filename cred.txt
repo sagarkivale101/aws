@@ -1,0 +1,31 @@
+//////////////////////
+
+// String branchName = "master"
+// String gitCredentials = "6c6c44c2-0f07-40bd-b4a5-238abd94a39a"
+// String repoUrl = "https://github.com/sagarkivale101/jenkins.git"
+
+
+// node {
+//      def app 
+//      stage('clone') {
+//       //checkout scm  
+//         git branch: branchName, credentialsId: 	gitCredentials, url: repoUrl
+         
+//      }
+//      stage('Build docker Image'){
+//       app = docker.build("samk101/git_clone")
+//     }
+//      stage('Test Image'){
+//        app.inside {
+//          sh 'echo "TEST PASSED"'
+//       }  
+//     }
+//      stage('Push Image'){
+//        //docker.withRegistry('https://registry.hub.docker.com', 'git') {            
+//        app.push("${env.BUILD_NUMBER}")            
+//        app.push("new")   
+//    }
+// //}
+// }
+
+
