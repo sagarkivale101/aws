@@ -15,7 +15,7 @@ pipeline {
         stage('Build') { 
             steps { 
                 script{
-                 app = docker.build("dockerdemo")
+                 app = docker.build("samk101/dockerdemo")
                 }
             }
         }
