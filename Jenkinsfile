@@ -1,3 +1,7 @@
+ String branchName = "newone"
+ String gitCredentials = "6c6c44c2-0f07-40bd-b4a5-238abd94a39a"
+ String repoUrl = "https://github.com/sagarkivale101/aws.git"
+
 pipeline {
     agent any
     options {
@@ -7,7 +11,8 @@ pipeline {
          stage('Clone repository') { 
             steps { 
                 script{
-                checkout scm
+             //   checkout scm
+                git branch: branchName, credentialsId: 	gitCredentials, url: repoUrl
                 }
             }
         }
